@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Головна сторінка</title>
 </head>
 <body>
-    <h1>qq all hello world</h1>
+
+
+    <h1> Головна сторінка</h1>
+        {{if gt .Age 20}}
+        <span>Ну привіт</span>
+        {{else}}
+        <span>whoo are u</span>
+        {{end}}
+    <p>користувач : {{ .Name}}</p>
+    <p>гроші : {{ .Money}}</p>
+    <p>Вік : {{ .Age}}</p>
+    <ul>
+        {{range .Hobbies}}
+            <li><b>{{.}}</b></li>
+            {{else}}
+            <li>else</li>
+        {{end}}
+        
+    </ul>
+    
+    
 </body>
 </html>
